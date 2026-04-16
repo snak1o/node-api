@@ -1,0 +1,15 @@
+<h1>Movies</h1>
+<div class="movies-grid">
+    {{#each movies}}
+    <div class="movie-card">
+        <h2>{{this.title}}</h2>
+        <p><strong>Director:</strong> {{this.director}}</p>
+        <p><strong>Year:</strong> {{this.year}}</p>
+        <p><strong>Rating:</strong> {{this.rating}}</p>
+        <p><strong>Genres:</strong> {{this.genres}}</p>
+        <p class="available {{#if this.available}}yes{{else}}no{{/if}}">
+            {{#if this.available}}Available{{else}}Not available{{/if}}
+        </p>
+    </div>
+    {{/each}}
+</div>
